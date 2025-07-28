@@ -1,4 +1,4 @@
-# CMS Shacdn
+# CMS Shadcn
 
 ```js
   yarn install
