@@ -1,6 +1,12 @@
+import Layout from "@/components/Layout"
+
 function Home() {
   return (
-    <div className="w-screen h-[100svh] flex justify-center items-center text-white">Home</div>
+    <div className="w-screen h-[100svh] flex justify-center items-center text-white">
+      <Layout>
+        Hello
+      </Layout>
+    </div>
   )
 }
 
