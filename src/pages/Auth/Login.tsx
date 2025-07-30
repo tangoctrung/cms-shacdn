@@ -12,6 +12,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import useAuthStore from "@/store/useAuthStore"
 import { Toaster } from "@/components/ui/sonner"
+import { DEFAULT_LOGO } from "@/endpoint/config"
 
 const formSchema = z.object({
   email: z.string().min(1, {
@@ -48,9 +49,12 @@ export default function LoginPage() {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:w-[400px] w-[90%] p-5 bg-bg2 rounded-md text-txtDark">
-          <div className="mb-6">
-            <h1 className={`text-3xl text-center`}>Đăng nhập</h1>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:w-[400px] w-[90%] p-5 rounded-md text-bgDark boxShadowCard">
+          <div className="mb-10">
+            <div className="w-full flex justify-center">
+              <img src={DEFAULT_LOGO} className="w-20 h-20 rounded-xl object-cover" />
+            </div>
+            <h1 className={`text-2xl font-semibold text-center mt-5`}>Login - CMS Shadcn</h1>
           </div>
           <FormField
             control={form.control}
@@ -59,7 +63,7 @@ export default function LoginPage() {
               <FormItem className="gap-1">
                 <FormLabel className="text-sm">Email</FormLabel>
                 <FormControl>
-                  <Input className="border-bg8" placeholder="Nhập email của bạn..." {...field} />
+                  <Input className="border-bg8" placeholder="Type your email..." {...field} />
                 </FormControl>
                 <FormDescription></FormDescription>
                 <FormMessage className="text-[12px]" />
@@ -71,9 +75,9 @@ export default function LoginPage() {
             name="password"
             render={({ field }) => (
               <FormItem className="gap-1">
-                <FormLabel className="text-sm">Mật khẩu</FormLabel>
+                <FormLabel className="text-sm">Password</FormLabel>
                 <FormControl>
-                  <InputPassword placeholder="Nhập mật khẩu của bạn..." {...field} />
+                  <InputPassword placeholder="Type your password..." {...field} />
                 </FormControl>
                 <FormDescription></FormDescription>
                 <FormMessage className="text-[12px]" />
@@ -83,9 +87,9 @@ export default function LoginPage() {
 
           <div className="w-full flex justify-center mt-5">
             <Button type="submit"
-              className="bg-bgButton hover:bg-bgButtonHover cursor-pointer w-[150px]"
+              className="bg-bgButton hover:bg-bgButtonHover text-white cursor-pointer w-[150px]"
               disabled={form.formState.isSubmitting}
-            >Đăng nhập</Button>
+            >Login</Button>
           </div>
         </form>
       </Form>

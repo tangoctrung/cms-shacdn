@@ -37,7 +37,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --bg: #e0e0e0;
+  --bg: oklch(0.985 0 0);
   --bgDark: #121212;
   --txt: #6b6e79;
   --txtDark: #ffffff;
@@ -51,13 +51,13 @@
   --bg6: #929292;
   --bg7: #a6a6a6;
   --bg8: #b9b9b9;
-  --bg9: #cdcdcd;
+  --bg9: #efefef;
   --error: #f5222d;
   --link: #1677ff;
 }
 
 body {
-  background-color: var(--bg1);
+  background-color: #fff;
 }
 body::-webkit-scrollbar,
 .modalCardTextContent::-webkit-scrollbar,
@@ -136,7 +136,7 @@ body::-webkit-scrollbar-track {
   --color-bg6: #929292;
   --color-bg7: #a6a6a6;
   --color-bg8: #b9b9b9;
-  --color-bg9: #cdcdcd;
+  --color-bg9: #efefef;
   --color-error: #f5222d;
   --color-link: #1677ff;
 }
@@ -165,7 +165,7 @@ body::-webkit-scrollbar-track {
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
+  --sidebar: oklch(33.545% 0.00218 146.341);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0 0);
@@ -182,4 +182,8 @@ body::-webkit-scrollbar-track {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.boxShadowCard {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }

@@ -3,6 +3,7 @@ import scrollbar from "tailwind-scrollbar";
 
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {},
     screens: {
