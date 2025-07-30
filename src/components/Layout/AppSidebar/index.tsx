@@ -63,11 +63,11 @@ export function AppSidebar() {
           {items.map((item, index) => (
             <div
               key={index}
-              className={`w-full flex items-center py-[10px] my-1 px-2 cursor-pointer hover:bg-bg2 rounded-md ${window.location.pathname === item.url ? "bg-bg2" : ""
+              className={`w-full flex items-center py-[10px] my-3 px-[10px] cursor-pointer hover:bg-bg2 rounded-md ${window.location.pathname === item.url ? "bg-bg2" : ""
                 }`}
               onClick={() => navigate(item.url)}
             >
-              <item.icon className="w-6 h-6" />
+              <item.icon className="w-5 h-5" />
               {open && <p className="line-clamp-1 ml-3 text-sm w-[calc(100%-60px)]">{item.title}</p>}
             </div>
           ))}

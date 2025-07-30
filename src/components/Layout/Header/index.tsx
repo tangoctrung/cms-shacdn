@@ -32,7 +32,7 @@ function Header() {
   }
   return (
     <div className="fixed top-0 left-[60px] h-13 w-[calc(100%-60px)] bg-bg9 flex items-center justify-between px-10 border-b border-b-border">
-      <p className="sm:block hidden font-semibold">{renderTitleHeader()}</p>
+      <p className="sm:block hidden text-xl font-semibold">{renderTitleHeader()}</p>
       <div className="w-[calc(100%)] sm:w-auto">
         <DateRangePicker
           onUpdate={(values) => handleUpdateDate(values)}

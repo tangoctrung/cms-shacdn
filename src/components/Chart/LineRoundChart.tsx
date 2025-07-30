@@ -67,7 +67,7 @@ export default function LineRoundChart({ dataKey, dataPrimary, typeTooltip }: {
         {typeTooltip === "nocustom" ? <Tooltip /> : <Tooltip content={<CustomTooltip />} />}
         <Legend />
         {keys?.map((item: string, index: number) => (
-          <Line type="monotone" dataKey={item} stroke={colors[index]} />
+          <Line key={index} type="monotone" dataKey={item} stroke={colors[index]} />
         ))}
       </LineChart>
     </ResponsiveContainer>
