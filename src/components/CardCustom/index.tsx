@@ -6,7 +6,7 @@ function CardCustom(
     { children: React.ReactNode, title?: string, className?: string }
 ) {
   return (
-    <Card className={cn("bg-white !rounded-sm p-0 gap-3", className)}>
+    <Card className={cn("bg-white !rounded-sm p-0 gap-3 pt-8", className)}>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription></CardDescription>
